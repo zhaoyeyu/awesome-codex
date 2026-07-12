@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Atlas compass</title>
+  <desc id="desc">A rounded compass mark with a green route crossing a violet field.</desc>
+  <defs>
+    <linearGradient id="field" x1="14" y1="8" x2="84" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a99cff"/>
+      <stop offset=".52" stop-color="#6e59e8"/>
+      <stop offset="1" stop-color="#42359f"/>
+    </linearGradient>
+    <linearGradient id="route" x1="24" y1="72" x2="72" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73f3bd"/>
+      <stop offset="1" stop-color="#d8ff78"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="88" height="88" rx="28" fill="#0b1513"/>
+  <path d="M48 15c18.2 0 33 14.8 33 33S66.2 81 48 81 15 66.2 15 48 29.8 15 48 15Z" fill="url(#field)" opacity=".98"/>
+  <path d="M31 63 40.5 39.5 64 30 54.5 53.5 31 63Z" fill="#0b1513" stroke="#0b1513" stroke-linejoin="round" stroke-width="4"/>
+  <path d="m40.5 39.5 14 14M64 30 44.5 49.5" fill="none" stroke="url(#route)" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="48" cy="48" r="4.5" fill="#f7ffe8"/>
+  <path d="M48 9v7M48 80v7M9 48h7M80 48h7" stroke="#bfffdc" stroke-linecap="round" stroke-width="3"/>
+</svg>

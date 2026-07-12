@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Codex Atlas is a task-first resource map and workflow library for OpenAI Codex across the CLI, IDE, cloud, desktop, and CI.">
+    <meta name="theme-color" content="#0b1513">
+    <meta name="color-scheme" content="dark light">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+    <title>Codex Atlas — find the right workflow</title>
+    <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Codex Atlas home">
+        <img src="assets/brand-mark.svg" width="38" height="38" alt="">
+        <span>
+          <strong>Codex Atlas</strong>
+          <small>Field guide · 2026</small>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#explorer">Resources</a>
+        <a href="#playbooks">Playbooks</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-link" href="https://github.com/zhaoyeyu/awesome-codex" target="_blank" rel="noopener noreferrer" aria-label="View repository on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.4 11.4 0 0 0 12 .8Z"/></svg>
+        </a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Curated across every Codex surface</div>
+          <h1 id="hero-title">Find the right workflow.<br><em>Skip the link pile.</em></h1>
+          <p>Choose an outcome, match it to the right surface, and leave with a prompt plus an evidence checklist. Built for people shipping real work with Codex.</p>
+
+          <div class="hero-search-shell">
+            <label class="search-field" for="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.2 4.2"/></svg>
+              <span class="sr-only">Search resources</span>
+              <input id="search" type="search" autocomplete="off" placeholder="Search: reviews, AGENTS.md, cloud, MCP…">
+              <kbd>/</kbd>
+            </label>
+            <a class="primary-button" href="#playbooks">Browse playbooks <span aria-hidden="true">↘</span></a>
+          </div>
+
+          <div class="hero-meta" aria-label="Catalog summary">
+            <div><strong id="resource-stat">—</strong><span>reviewed resources</span></div>
+            <div><strong id="surface-stat">—</strong><span>working surfaces</span></div>
+            <div><strong id="playbook-stat">—</strong><span>evidence-led playbooks</span></div>
+          </div>
+        </div>
+
+        <aside class="route-card" aria-label="A practical Codex loop">
+          <div class="route-card-top">
+            <span>Reliable agent loop</span>
+            <span class="live-dot">Evidence first</span>
+          </div>
+          <ol class="route-list">
+            <li class="active">
+              <span class="route-number">01</span>
+              <div><strong>Scope</strong><small>Name the outcome and boundaries.</small></div>
+              <span class="route-mark">↗</span>
+            </li>
+            <li>
+              <span class="route-number">02</span>
+              <div><strong>Inspect</strong><small>Trace the real execution path.</small></div>
+              <span class="route-mark">↗</span>
+            </li>
+            <li>
+              <span class="route-number">03</span>
+              <div><strong>Change</strong><small>Keep the diff narrow and reviewable.</small></div>
+              <span class="route-mark">↗</span>
+            </li>
+            <li>
+              <span class="route-number">04</span>
+              <div><strong>Verify</strong><small>Run the actual user path and tests.</small></div>
+              <span class="route-mark">✓</span>
+            </li>
+          </ol>
+          <p>“Done” should describe a result you can inspect, not the moment an agent stopped typing.</p>
+        </aside>
+      </section>
+
+      <section class="surface-compass" aria-labelledby="surface-title">
+        <div class="section-heading compact">
+          <div>
+            <span class="section-index">01</span>
+            <h2 id="surface-title">Choose your workspace</h2>
+          </div>
+          <p>Filter the guide by where the work should happen.</p>
+        </div>
+        <div class="surface-tabs" id="surface-tabs" aria-label="Filter by Codex surface"></div>
+      </section>
+
+      <section class="explorer" id="explorer" aria-labelledby="explorer-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">02</span>
+            <h2 id="explorer-title">Resource explorer</h2>
+          </div>
+          <p>Small by design. Every active entry has an owner, a concrete use, and a recent review date.</p>
+        </div>
+
+        <div class="filter-bar" aria-label="Resource filters">
+          <label>
+            <span>Category</span>
+            <select id="category-filter"><option value="All">All categories</option></select>
+          </label>
+          <label>
+            <span>Level</span>
+            <select id="level-filter"><option value="All">All levels</option></select>
+          </label>
+          <label>
+            <span>Source</span>
+            <select id="source-filter"><option value="All">All sources</option></select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select id="sort-filter">
+              <option value="featured">Featured first</option>
+              <option value="title">Title A–Z</option>
+              <option value="reviewed">Recently reviewed</option>
+            </select>
+          </label>
+          <button class="reset-button" id="reset-filters" type="button">Reset</button>
+        </div>
+
+        <div class="results-line">
+          <p id="result-count" aria-live="polite">Loading resources…</p>
+          <p id="freshness-note"></p>
+        </div>
+
+        <div class="resource-grid" id="resource-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span>∅</span>
+          <h3>No route found</h3>
+          <p>Try a broader search or reset the filters.</p>
+          <button type="button" class="secondary-button" id="empty-reset">Reset filters</button>
+        </div>
+
+        <noscript>
+          <p class="noscript-note">The interactive filters require JavaScript. The maintained resource list is also available in the repository README.</p>
+        </noscript>
+      </section>
+
+      <section class="playbooks" id="playbooks" aria-labelledby="playbooks-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">03</span>
+            <h2 id="playbooks-title">Workflow playbooks</h2>
+          </div>
+          <p>Prompts are starting points. The evidence checklist is what makes the result trustworthy.</p>
+        </div>
+        <div class="playbook-grid" id="playbook-grid"></div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <span class="section-index">04</span>
+          <h2 id="about-title">Curated for the current agent era.</h2>
+          <p>The original repository documented the 2021 Codex model beta. Codex Atlas preserves that history while focusing the active guide on today's coding agent and its distinct surfaces.</p>
+          <a href="https://github.com/zhaoyeyu/awesome-codex/blob/main/archive/2021-codex-demos.md">Read the historical archive <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="principle-grid">
+          <article><span>01</span><h3>Outcome over hype</h3><p>Every card says what it helps you accomplish.</p></article>
+          <article><span>02</span><h3>Official for behavior</h3><p>Product and security claims route to maintained OpenAI sources.</p></article>
+          <article><span>03</span><h3>Proof over confidence</h3><p>Playbooks ask for commands, diffs, screenshots, or tests.</p></article>
+          <article><span>04</span><h3>Expiry is a feature</h3><p>Old review dates fail validation instead of fading into the page.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <img src="assets/brand-mark.svg" width="32" height="32" alt="">
+        <div><strong>Codex Atlas</strong><span>Curated, not exhaustive.</span></div>
+      </div>
+      <p>Community project · MIT licensed · Last full review <time datetime="2026-07-12">12 July 2026</time></p>
+      <a href="https://github.com/zhaoyeyu/awesome-codex/blob/main/CONTRIBUTING.md">Contribute a resource</a>
+    </footer>
+
+    <dialog id="playbook-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close playbook">×</button>
+        <span class="dialog-kicker" id="dialog-kicker"></span>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-summary" id="dialog-summary"></p>
+        <div class="dialog-surfaces" id="dialog-surfaces"></div>
+        <section aria-labelledby="prompt-title">
+          <div class="dialog-section-title">
+            <h3 id="prompt-title">Starter prompt</h3>
+            <button id="copy-prompt" type="button">Copy prompt</button>
+          </div>
+          <pre id="dialog-prompt"></pre>
+        </section>
+        <div class="dialog-columns">
+          <section aria-labelledby="steps-title"><h3 id="steps-title">Run the loop</h3><ol id="dialog-steps"></ol></section>
+          <section aria-labelledby="evidence-title"><h3 id="evidence-title">Ask for evidence</h3><ul id="dialog-evidence"></ul></section>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

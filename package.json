@@ -1,0 +1,20 @@
+{
+  "name": "codex-atlas",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A task-first, multi-surface field guide for OpenAI Codex.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "check:boundary": "node scripts/check-public-boundary.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:links:strict": "node scripts/check-links.mjs --strict",
+    "test": "node --test",
+    "check": "npm run validate && npm run check:boundary && npm test"
+  },
+  "license": "MIT"
+}

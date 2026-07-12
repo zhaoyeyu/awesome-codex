@@ -1,0 +1,92 @@
+[
+  {
+    "id": "map-a-codebase",
+    "kicker": "Understand",
+    "title": "Map an unfamiliar codebase",
+    "summary": "Build an evidence-backed system map before proposing changes.",
+    "surfaces": ["CLI", "IDE"],
+    "prompt": "Inspect this repository and explain the main execution path for [feature or request]. Identify entry points, state boundaries, external dependencies, tests, and likely change locations. Cite files and symbols. Do not edit yet; end with open questions and a minimal verification plan.",
+    "steps": [
+      "Name the user-visible flow or request to trace.",
+      "Locate entry points and follow data and control flow.",
+      "Compare implementation assumptions with tests and configuration.",
+      "Separate confirmed behavior from hypotheses and unknowns."
+    ],
+    "evidence": ["File and symbol map", "Execution-path narrative", "Open questions", "Verification plan"]
+  },
+  {
+    "id": "fix-a-reproducible-bug",
+    "kicker": "Repair",
+    "title": "Fix a reproducible bug",
+    "summary": "Move from a failing proof to a narrow repair and regression evidence.",
+    "surfaces": ["CLI", "IDE", "Cloud"],
+    "prompt": "Reproduce [bug] using the smallest reliable command or test. Trace the failure to its root cause, implement the narrowest safe fix, and add a regression test that fails before the change. Run the relevant test suite and report exact commands, outcomes, and remaining risk.",
+    "steps": [
+      "Capture the current failure before editing.",
+      "Trace the first incorrect state, not only the final exception.",
+      "Make the smallest behavior-preserving repair.",
+      "Prove the fix and inspect the final diff."
+    ],
+    "evidence": ["Reproduction", "Root cause", "Regression test", "Post-fix commands"]
+  },
+  {
+    "id": "polish-a-frontend",
+    "kicker": "Design",
+    "title": "Polish a responsive frontend",
+    "summary": "Improve hierarchy and interaction quality with visual proof, not CSS churn.",
+    "surfaces": ["IDE", "Desktop"],
+    "prompt": "Audit this interface at mobile and desktop widths. Preserve product behavior while improving hierarchy, spacing, typography, color contrast, keyboard focus, empty and loading states, and responsive layout. Reuse the existing design system. Test key interactions and provide before/after screenshots plus accessibility findings.",
+    "steps": [
+      "Inspect the live interface and existing tokens first.",
+      "Prioritize usability defects and inconsistent states.",
+      "Implement one coherent visual direction.",
+      "Verify interaction, responsiveness, and accessibility."
+    ],
+    "evidence": ["Viewport screenshots", "Keyboard walkthrough", "Contrast check", "Interaction tests"]
+  },
+  {
+    "id": "parallelize-with-boundaries",
+    "kicker": "Scale",
+    "title": "Parallelize with clear boundaries",
+    "summary": "Split independent work without creating overlapping edits or unverifiable merges.",
+    "surfaces": ["Cloud", "CLI", "Desktop"],
+    "prompt": "Decompose [goal] into independent, bounded workstreams. State ownership, inputs, outputs, shared-file risks, and a verification command for each stream. Use separate branches or worktrees where edits could overlap. Integrate only after each result has evidence and the combined suite passes.",
+    "steps": [
+      "Draw boundaries around independently verifiable outcomes.",
+      "Assign ownership and identify shared files before work starts.",
+      "Keep each stream's diff and test evidence reviewable.",
+      "Run integration checks after combining results."
+    ],
+    "evidence": ["Workstream map", "Ownership boundaries", "Per-stream checks", "Integration result"]
+  },
+  {
+    "id": "review-a-change",
+    "kicker": "Review",
+    "title": "Review a change like a maintainer",
+    "summary": "Find concrete regressions and missing proof before discussing style.",
+    "surfaces": ["CLI", "Cloud", "CI"],
+    "prompt": "Review the diff against its stated goal. Prioritize correctness, security, data loss, compatibility, accessibility, and missing tests. For every finding, cite the file and line, explain the failure scenario, and suggest the smallest remedy. Verify claims from code or tests; do not invent issues to fill a quota.",
+    "steps": [
+      "Establish intended behavior and changed boundaries.",
+      "Trace risky paths and state transitions.",
+      "Run focused checks for plausible regressions.",
+      "Report findings by severity, then residual uncertainty."
+    ],
+    "evidence": ["Line-specific findings", "Failure scenarios", "Executed checks", "Residual risk"]
+  },
+  {
+    "id": "automate-a-repeatable-check",
+    "kicker": "Automate",
+    "title": "Automate a repeatable check",
+    "summary": "Turn a proven manual workflow into a constrained, observable automation.",
+    "surfaces": ["CLI", "CI"],
+    "prompt": "Turn the validated manual workflow for [check] into deterministic automation. Define inputs, outputs, permissions, timeouts, failure behavior, and an idempotent dry run. Avoid broad credentials. Add fixtures for success and failure, document the exact invocation, and prove that errors stop the workflow visibly.",
+    "steps": [
+      "Prove the manual path and define its contract.",
+      "Minimize permissions and external side effects.",
+      "Make success, failure, and timeout observable.",
+      "Test idempotency and document recovery."
+    ],
+    "evidence": ["Input/output contract", "Least-privilege review", "Failure fixture", "Dry-run result"]
+  }
+]
